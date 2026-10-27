@@ -1,4 +1,4 @@
-const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000').replace(/\/$/, '');
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || 'https://learnhub-backend-ufkr.onrender.com').replace(/\/$/, '');
 
 export class ApiError extends Error {
   constructor(message, status, details) {

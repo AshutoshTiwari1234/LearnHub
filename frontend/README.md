@@ -6,7 +6,7 @@ React and Vite single-page app for the existing LearnHub Express API.
 
 1. Start the local MongoDB service and the backend first. In PowerShell, from `backend`, run `npm.cmd run dev`.
 2. From `frontend`, install packages once with `npm.cmd install`.
-3. Set `VITE_API_BASE_URL=http://localhost:5000` in `frontend/.env`. You can copy `.env.example` if `.env` does not exist; it contains no credentials. The app defaults to `http://localhost:5000` when the variable is omitted.
+3. For local development, set `VITE_API_BASE_URL=http://localhost:5000` in `frontend/.env`. The production build defaults to the hosted Render API (`https://learnhub-backend-ufkr.onrender.com`) when the variable is omitted.
 4. Run `npm.cmd run dev` from `frontend` and open `http://127.0.0.1:5173`.
 
 The backend already enables CORS for browser requests. The frontend sends the JWT as an `Authorization: Bearer ...` header and does not contain the JWT signing secret or database URI. The token is kept in `sessionStorage` and cleared when the user signs out or the token is rejected.
